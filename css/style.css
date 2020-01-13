@@ -1,14 +1,3 @@
-/*------------------------------------------------------------------
-
- *
- * Author      : Wditsolution
- * Project     : Badhon Khan
- * Version     : 1.0.0
- * Description : Just a simple starter template to jump start your development.
- * Primary use : Wditsolution
- * Last update : 17/9/09
- *
-
  * -----------------------------------------------------------------*
  *                         TABLE OF CONTENTS                        *
  * -----------------------------------------------------------------*
@@ -1231,7 +1220,7 @@ a.yt{background: #ff0000}
 }
 
 .login-section {
-  padding: 95px 49px 30px 30px;
+  padding: 95px 35px 30px 35px;
 }
 
 .nav-tabs .nav-link.active {
@@ -1292,8 +1281,6 @@ a.yt{background: #ff0000}
 .wd-modal-tab-menu {
   position: absolute;
   z-index: 10;
-  right: 0;
-  width: 50%;
   background: #f4f4f4;
 }
 .wd-modal-tab-menu a {

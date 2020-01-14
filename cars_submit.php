@@ -20,7 +20,7 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt->bindParam(':brand',$_REQUEST['brand']);
     $stmt->bindParam(':model',$_REQUEST['model']);
     $stmt->bindParam(':engine_type',$_REQUEST['engine_type']);
-    $stmt->bindParam(':engine_capacity',$_REQUEST['engine_capacity'];
+    //$stmt->bindParam(':engine_capacity',$_REQUEST['engine_capacity'];
    // $stmt->bindParam(':year',$_REQUEST['year']);
     //$stmt->bindParam(':price',$_REQUEST['price']);
     //$stmt->bindParam(':color',$_REQUEST['color']);

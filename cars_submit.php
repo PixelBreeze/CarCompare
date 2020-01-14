@@ -23,9 +23,9 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //$stmt->bindParam(':engine_capacity',$_REQUEST['engine_capacity'];
     $stmt->bindParam(':year',$_REQUEST['year']);
     $stmt->bindParam(':price',$_REQUEST['price']);
-    //$stmt->bindParam(':color',$_REQUEST['color']);
-    //$stmt->bindParam(':gear_box',$_REQUEST['gear_box']);
-    //$stmt->bindParam(':descr',$_REQUEST['descr']);
+    $stmt->bindParam(':color',$_REQUEST['color']);
+    $stmt->bindParam(':gear_box',$_REQUEST['gear_box']);
+    $stmt->bindParam(':descr',$_REQUEST['descr']);
     
     $stmt->execute();
     echo "Records inserted successfully.";

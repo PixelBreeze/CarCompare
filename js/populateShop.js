@@ -41,3 +41,11 @@ $(window).ready(function(e) {
         }
     });
 });
+
+function ShowMore() {
+  var x = document.getElementsByClassName("reviews-load-more-full_grid");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].classList.remove("reviews-load-more-full_grid");
+  }
+}

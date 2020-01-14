@@ -25,13 +25,14 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt->bindParam(':price',$_REQUEST['price']);
     $stmt->bindParam(':color',$_REQUEST['color']);
     $stmt->bindParam(':gear_box',$_REQUEST['gear_box']);
-    $stmt->bindParam(':descr',$_REQUEST['descr']);
+    $stmt->bindParam(':descr',$_REQUEST['descr']);*/
     
     $stmt->execute();
     echo "Records inserted successfully.";
-//} catch(PDOException $e){
-  //  die("ERROR: Could not able to execute $query. " . $e->getMessage());
-//}
+/*
+} catch(PDOException $e){
+  die("ERROR: Could not able to execute $query. " . $e->getMessage());
+}
 unset($connection);
                      
 //$brand = mysqli_real_escpae_string($connection,$_REQUEST['brand']);

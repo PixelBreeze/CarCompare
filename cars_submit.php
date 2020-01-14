@@ -18,6 +18,8 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = "INSERT INTO cars (brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
     $stmt = $connection->prepare($query);
 echo "This is query $query ";
+echo "This is cnt $connection ";
+echo "This is stmt $connection ";
 /*
     $stmt->bindParam(':brand',$_REQUEST['brand']);
     $stmt->bindParam(':model',$_REQUEST['model']);

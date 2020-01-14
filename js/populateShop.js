@@ -20,7 +20,7 @@ $(window).ready(function(e) {
                 var divDesc = '<div class="col-12"><div class="content-excerpt"><h6 class="product-title">' + obj.brand + ' ' + obj.model + ' <br>' + obj.year + '</h6><p class="product-content">' + obj.descr + '</p></div></div>';
                 var divCompButton = '<div class="col-12"><div id="car.' + obj.id + '" class="compare-btn"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-exchange" aria-hidden="true"></i> Add to compare</a></div></div>';
 		
-		if (i > 12) {
+		if (i > 9) {
 			divStart = divStartHidden;
 		}
                 var div =

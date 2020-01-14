@@ -46,5 +46,5 @@ unset($connection);
 //} else{
 //    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
 //}
-/*
+*/
 ?>

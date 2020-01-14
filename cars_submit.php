@@ -1,4 +1,7 @@
 <?php
+ ini_set("display_errors", "1");
+ error_reporting(E_ALL);
+
 //echo '<h3 style="text-align:center;">A very detailed error message ( ͡° ͜ʖ ͡°)</h3>';
 $host = "localhost";
 $db_name = "cars";

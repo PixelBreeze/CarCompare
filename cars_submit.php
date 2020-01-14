@@ -15,7 +15,9 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
     die("ERROR: Could not connect. " . $e->getMessage());
 }
+
 try{
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $query = "INSERT INTO cars (brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
     $stmt = $connection->prepare($query);
     $stmt->bindParam(':brand',$_REQUEST['brand']);

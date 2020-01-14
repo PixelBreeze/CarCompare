@@ -35,7 +35,7 @@ try{
 } catch(PDOException $e){
   die("ERROR: Could not able to execute $query. " . $e->getMessage());
 }
-unset($connection);
+//unset($connection);
                    
 //$brand = mysqli_real_escpae_string($connection,$_REQUEST['brand']);
 

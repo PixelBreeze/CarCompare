@@ -13,5 +13,13 @@ $connection->exec("set names utf8");
 echo "Connection error: " . $exception->getMessage();
 }
 
+$brand = mysqli_real_escpae_string($connection,$_REQUEST['brand']);
+
 $query = "INSERT INTO cars (brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( '$brand', '$model', '$engine_type', '$engine_capacity', '$year', '$price', '$color', '$gear_box', '$descr')";
+
+if(mysqli_query($connection, $query)){
+    echo "Car records added successfully.";
+} else{
+    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
+}
 ?>

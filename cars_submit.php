@@ -11,7 +11,8 @@ $connection->exec("set names utf8");
 }catch(PDOException $exception){
 echo "Connection error: " . $exception->getMessage();
 }
+
 function saveData($brand, $model, $engine_type,$engine_capacity,$year,$price,$color,$gear_box,$descr){
 global $connection;
-$query = "INSERT INTO cars(brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
+$query = "INSERT INTO cars(brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr);";
 ?>

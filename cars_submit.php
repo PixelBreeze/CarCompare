@@ -16,8 +16,7 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     die("ERROR: Could not connect. " . $e->getMessage());
 }
     $query = "INSERT INTO cars (brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
-    //$stmt = $connection->prepare($query);
-    /*
+    $stmt = $connection->prepare($query);
     $stmt->bindParam(':brand',$_REQUEST['brand']);
     $stmt->bindParam(':model',$_REQUEST['model']);
     $stmt->bindParam(':engine_type',$_REQUEST['engine_type']);
@@ -30,9 +29,9 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     $stmt->execute();
     echo "Records inserted successfully.";
-} catch(PDOException $e){
-    die("ERROR: Could not able to execute $query. " . $e->getMessage());
-}
+//} catch(PDOException $e){
+  //  die("ERROR: Could not able to execute $query. " . $e->getMessage());
+//}
 unset($connection);
                      
 //$brand = mysqli_real_escpae_string($connection,$_REQUEST['brand']);
@@ -43,5 +42,4 @@ unset($connection);
  //   echo "Car records added successfully.";
 //} else{
 //    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
-*/
 ?>

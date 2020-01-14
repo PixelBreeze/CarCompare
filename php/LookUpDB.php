@@ -21,7 +21,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
         'color' => $row['color'],
         'gear_box' => $row['gear_box'],
         'descr' => $row['descr'],
-        'img_url' => $row['img_url'],
+        'img_url' => $row['img_url']
     );
 }
 

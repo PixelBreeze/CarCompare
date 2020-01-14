@@ -11,30 +11,48 @@ $connection->exec("set names utf8");
 echo "Connection error: " . $exception->getMessage();
 }
 
-function saveData($name, $email, $message){
+function saveData($brand, $model, $engine_type,$engine_capacity,$year,$price,$color,$gear_box,$descr){
 global $connection;
-$query = "INSERT INTO cars(name, email, message) VALUES( :name, :email, :message)";
+$query = "INSERT INTO cars(brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
 
 $callToDb = $connection->prepare( $query );
-$name=htmlspecialchars(strip_tags($name));
-$email=htmlspecialchars(strip_tags($email));
-$message=htmlspecialchars(strip_tags($message));
-$callToDb->bindParam(":name",$name);
-$callToDb->bindParam(":email",$email);
-$callToDb->bindParam(":message",$message);
-
+$brand=htmlspecialchars(strip_tags($brand));
+$model=htmlspecialchars(strip_tags($model));
+$engine_type=htmlspecialchars(strip_tags($engine_type));
+$engine_capacity=htmlspecialchars(strip_tags($engine_capacity));
+$year=htmlspecialchars(strip_tags($year));
+$price=htmlspecialchars(strip_tags($price));
+$color=htmlspecialchars(strip_tags($color));
+$gear_box=htmlspecialchars(strip_tags($gear_box));
+$descr=htmlspecialchars(strip_tags($descr));
+$callToDb->bindParam(":brand",$brand);
+$callToDb->bindParam(":model",$model);
+$callToDb->bindParam(":engine_type",$engine_type);
+$callToDb->bindParam(":engine_capacity",$engine_capacity;
+$callToDb->bindParam(":year",$year);
+$callToDb->bindParam(":price",$price);
+$callToDb->bindParam(":color",$color);
+$callToDb->bindParam(":gear_box",$gear_box);
+$callToDb->bindParam(":descr",$descr);
+  
 if($callToDb->execute()){
-return '<h3 style="text-align:center;">We will get back to you very shortly!</h3>';
+return '<h3 style="text-align:center;">Car has been added to db!</h3>';
 }
 }
 
 if( isset($_POST['submit'])){
-$name = htmlentities($_POST['name']);
-$email = htmlentities($_POST['email']);
-$message = htmlentities($_POST['message']);
-
+$brand = htmlentities($_POST['brand']);
+$model = htmlentities($_POST['model']);
+$engine_type = htmlentities($_POST['engine_type']);
+$engine_capacity = htmlentities($_POST['engine_capacity']);
+$year = htmlentities($_POST['year']);
+$price = htmlentities($_POST['price']);
+$color = htmlentities($_POST['color']);
+$gear_box = htmlentities($_POST['gear_box']);
+$descr = htmlentities($_POST['descr']);
+  
 //then you can use them in a PHP function. 
-$result = saveData($name, $email, $message);
+$result = saveData($brand, $model, $engine_type,$engine_capacity,$year,$price,$color,$gear_box,$descr);
 echo $result;
 }
 else{

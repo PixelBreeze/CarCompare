@@ -45,5 +45,4 @@ try{
  //   echo "Car records added successfully.";
 //} else{
 //    echo "ERROR: Could not able to execute $query. " . mysqli_error($connection);
-*/
 ?>

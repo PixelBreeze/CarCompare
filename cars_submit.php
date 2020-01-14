@@ -17,11 +17,8 @@ $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
     $query = "INSERT INTO cars (brand, model, engine_type, engine_capacity, year, price, color, gear_box, descr) VALUES( :brand, :model, :engine_type, :engine_capacity, :year, :price, :color, :gear_box, :descr)";
     $stmt = $connection->prepare($query);
-echo "This is query $query ";
-echo "This is stmt $stmt ";
-/*
     $stmt->bindParam(':brand',$_REQUEST['brand']);
-    $stmt->bindParam(':model',$_REQUEST['model']);
+    /*$stmt->bindParam(':model',$_REQUEST['model']);
     $stmt->bindParam(':engine_type',$_REQUEST['engine_type']);
     $stmt->bindParam(':engine_capacity',$_REQUEST['engine_capacity'];
     $stmt->bindParam(':year',$_REQUEST['year']);

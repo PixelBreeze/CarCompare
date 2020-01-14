@@ -427,6 +427,7 @@
 				        Single Product Gallery Section
                         ========================================= -->
                         <div class="row">
+				
                             <div class="col-md-12 product-slier-details">
                                 <div id="product-view-model" class="product-view owl-carousel owl-theme">
                                     <div class="item">
@@ -1181,6 +1182,40 @@
                             </div>
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <div class="row">
+					<script>
+        $(window).ready(function(e) {
+            $.ajax({
+                url : "php/LookUpDB.php",
+                type : "post", 
+                dataType: "json",
+                success : function(list){           
+                    var divCol  = "<div class='col-md-12 product-slier-details'>";
+                    var divWell = "<div class='well' style='position:relative'>";
+                    var divClose = "</div>";
+
+                    list.forEach(function(obj, index) {
+                        var brand     = "<h5>"      + obj.brand    + "</h5>";
+                        var linkStart = "<a href='" + obj.imagePath + "' rel='lightbox' title='" + obj.title + "'>"
+                        var image     = "<img data-toggle='tooltip' data-placement='left' class='wellImg' title='Click to enlarge image' src='" + obj.imagePath + "'/>"
+                        var desc      = "<p>"       + obj.desc + "</p>";
+                        var linkEnd   = "</a>";
+
+                        var div = divCol    +
+                        divWell     +
+                        title       +
+                        linkStart        +
+                        image       +
+                        desc +
+                        linkEnd     +
+                        divClose +
+                        divClose;
+
+                        $("#CR").append(div); // insert the div you've just created
+                    });
+                }
+            });
+        });
+    </script>
                                     <div class="col-12 col-md-6 col-lg-12 reviews-load-more-full_grid">
                                         <figure class="figure product-box row">
                                             <div class="col-12 col-md-12 col-lg-5 col-xl-4 p0">

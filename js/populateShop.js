@@ -14,7 +14,7 @@ $(window).ready(function(e) {
 
             list.forEach(function(obj, index) {
 
-                var divImage = '<img src="/img/product-img-'+ obj.id +'.png" class="figure-img img-fluid" alt="Product Img"></div>';
+                var divImage = '<img src="/img/product-img/product-img-'+ obj.id +'.png" class="figure-img img-fluid" alt="Product Img"></div>';
                 var divQVbutton = '<div class="quick-view-btn"><div class="compare-btn"><button id="' + obj.id + '" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg-product-1"><i class="fa fa-eye" aria-hidden="true"></i> Quick view</button></div></div>';
                 var divPrice = '<strong class="active-color"><u>' + obj.price + '€</u></strong></div></div>';
                 var divDesc = '<div class="col-12"><div class="content-excerpt"><h6 class="product-title">' + obj.brand + ' ' + obj.model + ' <br>' + obj.year + '</h6><p class="product-content">' + obj.descr + '</p></div></div>';

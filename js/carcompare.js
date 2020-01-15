@@ -33,7 +33,7 @@ function compareCar(event){
   var carPrice = domElement.parentElement.parentElement.previousSibling.previousSibling.previousSibling.childNodes[0].childNodes[0].childNodes[0].innerHTML;
   var carImage = "url/"+carid;
   var carCount = 0//getCookie('carCount');
-  var carInfo = carid+";"+carTitle+";"+carPrice+";"+carImage;
+  var carInfo = carid+":"+carTitle+":"+carPrice+":"+carImage;
   if(carCount < 3) {
     if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);

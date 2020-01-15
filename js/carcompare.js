@@ -53,6 +53,7 @@ function addCarToList(carInfo){
   var div = divStart + divImage + divBody;
   console.log(div);
   $(".wd-item-list").append(div);
+  updateData();
 }
 
 function compareCar(event){
@@ -76,6 +77,7 @@ function compareCar(event){
   }
   carCount++;
   setCookie('carCount',carCount,7);
+  updateData();
   console.log(carCount);
   //console.log(getCookie('carInfo1'));
   

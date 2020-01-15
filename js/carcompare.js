@@ -75,12 +75,12 @@ function compareCar(event){
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }
+    arCount++;
+    setCookie('carCount',carCount,7);
+    console.log(carCount);
+    document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
   } else {
     alert("Reached maximum of cars to compare!");
   }
-  carCount++;
-  setCookie('carCount',carCount,7);
-  console.log(carCount);
-  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 
 }

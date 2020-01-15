@@ -77,7 +77,7 @@ function compareCar(event){
   }
   carCount++;
   setCookie('carCount',carCount,7);
-  updateData();
+  //updateData();
   console.log(carCount);
   //console.log(getCookie('carInfo1'));
   

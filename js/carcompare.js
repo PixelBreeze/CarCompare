@@ -76,14 +76,14 @@ function compareCar(event){
   var carImage = "url/"+carid;
   var carCount = getCookie('carCount');
   var carInfo = carid+":"+carTitle+":"+carPrice+":"+carImage;
-  if(carCount < 4) {
-    if(carCount == 1) {
+  if(carCount < 3) {
+    if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);
       addCarToList(carInfo);
-    } else if(carCount == 2) {
+    } else if(carCount == 1) {
       setCookie('carInfo2',carInfo,7);
       addCarToList(carInfo);
-    } else if(carCount == 3) {
+    } else if(carCount == 2) {
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }

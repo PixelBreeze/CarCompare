@@ -101,4 +101,5 @@ function compareCar(event){
   } else {
     alert("Reached maximum of cars to compare!");
   }
+	document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 }

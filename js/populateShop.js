@@ -16,7 +16,7 @@ $(window).ready(function(e) {
 
                 var divImage = '<img src="" class="figure-img img-fluid" alt="Product Img"></div>';
                 var divQVbutton = '<div class="quick-view-btn"><div class="compare-btn"><button id="' + obj.id + '" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".bd-example-modal-lg-product-1"><i class="fa fa-eye" aria-hidden="true"></i> Quick view</button></div></div>';
-                var divPrice = '<strong class="active-color"><u>' + obj.price + '€</u></strong></div></div>';
+                var divPrice = '<strong class="active-color"><u>' + obj.price + '€</u></strong></div><div class="deleteCompare">Delete</div></div>';
                 var divDesc = '<div class="col-12"><div class="content-excerpt"><h6 class="product-title">' + obj.brand + ' ' + obj.model + ' <br>' + obj.year + '</h6><p class="product-content">' + obj.descr + '</p></div></div>';
                 var divCompButton = '<div class="col-12"><div class="compare-btn"><a id="' + obj.id + '" class="btn btn-primary btn-sm" onclick="compareCar(event)"><i class="fa fa-exchange" aria-hidden="true"></i> Add to compare</a></div></div>';
 		

@@ -61,7 +61,7 @@ function addCarToList(carInfo){
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';
-  var divBody = '<div class="media-body"><h6 class="mt-0 list-group-title">'+ arr[1] +'</h6><div class="rating"><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></div><div class="cart-price">'+ arr[2] +'</div><div class="deleteCompare">Delete</div></div></div>';
+  var divBody = '<div class="media-body"><h6 class="mt-0 list-group-title">'+ arr[1] +'</h6><div class="rating"><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></div><div class="cart-price">'+ arr[2] +'</div><div class="deleteCompare" onclick="delCookie('+ carCount +')">Delete</div></div></div>';
   
   var div = divStart + divImage + divBody;
   //console.log(div);

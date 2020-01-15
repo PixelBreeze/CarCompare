@@ -29,14 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function compareCar(event){
   var domElement = $(event.target);
   var carid = domElement.attr('id');
-  var carCount = getCookie('carCount');
+  var carTitle = domElement.parentNode.parentNode.previousSibling.childNodes[0].ChildNodes[1].innerHTML;
+  var carCount = 0//getCookie('carCount');
   if(carCount < 3) {
     carCount++;
     setCookie('carCount',carCount,7);
+    
   } else {
     alert("Reached maximum of cars to compare!");
   }
   console.log(carCount);
+  console.log(carTitle);
   
   //setCookie('carCount',i,7);
 }

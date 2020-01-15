@@ -58,6 +58,9 @@ function updateData(){
 
 function addCarToList(carInfo){
   var carCount = getCookie('carCount');
+  carCount++;
+  setCookie('carCount',carCount,7);
+  
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';
@@ -76,6 +79,8 @@ function compareCar(event){
   var carImage = "url/"+carid;
   var carCount = getCookie('carCount');
   var carInfo = carid+":"+carTitle+":"+carPrice+":"+carImage;
+  
+  console.log(carCount);
   if(carCount < 3) {
     if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);
@@ -87,11 +92,9 @@ function compareCar(event){
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }
-    console.log(carCount);
-    carCount++;
-    setCookie('carCount',carCount,7);
+    
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
   } else {
     alert("Reached maximum of cars to compare!");
   }
-}//
+}

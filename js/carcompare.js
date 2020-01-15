@@ -60,7 +60,8 @@ function addCarToList(carInfo){
   var carCount = getCookie('carCount');
   carCount++;
   setCookie('carCount',carCount,7);
-  
+  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
+	
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';
@@ -92,8 +93,7 @@ function compareCar(event){
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }
-    
-    document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
+   
   } else {
     alert("Reached maximum of cars to compare!");
   }

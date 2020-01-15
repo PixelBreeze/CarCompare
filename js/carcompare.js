@@ -23,7 +23,7 @@ function getCookie(cname) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var carCount = getCookie('carCount');
-    console.log(carCount);
+    console.log('car count is',carCount);
 }, false);
 
 function compareCar(event){

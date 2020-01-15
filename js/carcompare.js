@@ -33,13 +33,13 @@ function updateData(){
     console.log('car count is',carCount);
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;//set number for icon
     //console.log(test);
-    if(car1 != null) {
+    if(car1 != "") {
       addCarToList(car1);
     }
-    if(car2 != null) {
+    if(car2 != "") {
       addCarToList(car2);
     }
-    if(car3 != null) {
+    if(car3 != "") {
       addCarToList(car3);
     }
 }

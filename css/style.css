@@ -134,11 +134,11 @@ img {
 }
 
 .black-bg {
-  background: #333333 !important;
+  background: #000000 !important;
 }
 
 .orange-bg {
-  background: #f37020 !important;
+  background: #696969 !important;
 }
 
 .green-bg {
@@ -1375,7 +1375,7 @@ a.yt{background: #ff0000}
 }
 #wd-header .department,
 #wd-header-2 .department {
-  background: #232f3e;
+  background: #F79800;
   color: #fff;
   padding: 14px 20px;
   border-radius: 4px;
@@ -1555,14 +1555,14 @@ a.yt{background: #ff0000}
 	==================
 */
 .dark-header#wd-header {
-  background: #232f3e;
+  background: #2B2A2A;
 }
 .dark-header#wd-header .my-account {
 	color: #fff;
 	float: right;
 }
 .bg-orange.wd-header-nav {
-  background: #fdb813 !important;
+  background: #696969 !important;
 }
 .third-home #main-slider-section .slider-text {
   padding-left: 0;

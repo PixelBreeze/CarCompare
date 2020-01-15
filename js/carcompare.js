@@ -57,8 +57,6 @@ function updateData(){
 }
 
 function addCarToList(carInfo){
-  var carCount = getCookie('carCount');
-  carCount++;
   setCookie('carCount',carCount,7);
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
@@ -89,6 +87,8 @@ function compareCar(event){
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }
+	  var carCount = getCookie('carCount');
+  carCount++;
     console.log(carCount);
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
   } else {

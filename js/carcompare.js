@@ -26,13 +26,18 @@ function delCookie(i){
   var carCount = getCookie('carCount');
   carCount--;
   setCookie('carCount',carCount,7);
+  updateData();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   updateData();
 }, false);
 
-function updateData(){
+function updateData(){  
+    const compareBox = document.getElementsByClassName("wd-item-list")[0];
+	  while (compareBox.lastChild) {
+		  compareBox.removeChild(compareBox.lastChild);
+	  }
     var carCount = getCookie('carCount');
     var car1 = getCookie('carInfo1');
     var car2 = getCookie('carInfo2');

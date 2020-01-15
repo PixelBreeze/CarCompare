@@ -35,15 +35,20 @@ function compareCar(event){
   var carCount = 0//getCookie('carCount');
   var carInfo = carid+";"+carTitle+";"+carPrice+";"+carImage;
   if(carCount < 3) {
-    carCount++;
-    setCookie('carCount',carCount,7);
-    
+    if(carCount == 0) {
+      setCookie('carInfo1',carInfo,7);
+    } else if(carCount == 1) {
+      setCookie('carInfo2',carInfo,7);
+    } else if(carCount == 2) {
+      setCookie('carInfo3',carInfo,7);
+    }
   } else {
     alert("Reached maximum of cars to compare!");
   }
+  carCount++;
+  setCookie('carCount',carCount,7);
   console.log(carCount);
-  console.log(carInfo);
-  console.log("wut");
+  console.log(getCookie('carInfo1');
   
   //setCookie('carCount',i,7);
 }

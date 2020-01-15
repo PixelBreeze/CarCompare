@@ -76,7 +76,6 @@ function compareCar(event){
   var carImage = "url/"+carid;
   var carCount = getCookie('carCount');
   var carInfo = carid+":"+carTitle+":"+carPrice+":"+carImage;
-  carCount++;
   if(carCount < 4) {
     if(carCount == 1) {
       setCookie('carInfo1',carInfo,7);
@@ -89,6 +88,8 @@ function compareCar(event){
       addCarToList(carInfo);
     }
     console.log(carCount);
+    carCount++;
+    setCookie('carCount',carCount,7);
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
   } else {
     alert("Reached maximum of cars to compare!");

@@ -51,6 +51,7 @@ function addCarToList(carInfo){
   var divBody = '<div class="media-body"><h6 class="mt-0 list-group-title">'+ arr[1] +'</h6><div class="rating"><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></div><div class="cart-price">'+ arr[2] +'</div></div></div>';
   
   var div = divStart + divImage + divBody;
+  console.log(div);
   $("#wd-item-list").append(div);
 }
 

@@ -53,7 +53,6 @@ function addCarToList(carInfo){
   var div = divStart + divImage + divBody;
   console.log(div);
   $(".wd-item-list").append(div);
-  updateData();
 }
 
 function compareCar(event){
@@ -62,22 +61,24 @@ function compareCar(event){
   var carTitle = domElement.parentElement.parentElement.previousSibling.childNodes[0].childNodes[1].innerHTML;
   var carPrice = domElement.parentElement.parentElement.previousSibling.previousSibling.previousSibling.childNodes[0].childNodes[0].childNodes[0].innerHTML;
   var carImage = "url/"+carid;
-  var carCount = 0//getCookie('carCount');
+  var carCount = getCookie('carCount');
   var carInfo = carid+":"+carTitle+":"+carPrice+":"+carImage;
   if(carCount < 3) {
     if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);
+      addCarToList(carInfo);
     } else if(carCount == 1) {
       setCookie('carInfo2',carInfo,7);
+      addCarToList(carInfo);
     } else if(carCount == 2) {
       setCookie('carInfo3',carInfo,7);
+      addCarToList(carInfo);
     }
   } else {
     alert("Reached maximum of cars to compare!");
   }
   carCount++;
   setCookie('carCount',carCount,7);
-  //updateData();
   console.log(carCount);
   //console.log(getCookie('carInfo1'));
   

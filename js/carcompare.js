@@ -21,6 +21,13 @@ function getCookie(cname) {
   return "0";
 }
 
+function delCookie(i){
+  document.cookie = "carInfo" + i + "=0;expires=Thu, 1 Jan 2020 20:24:25 GMT;path=/";
+  var carCount = getCookie('carCount');
+  carCount--;
+  setCookie('carCount',carCount,7);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   updateData();
 }, false);

@@ -44,7 +44,7 @@ function addCarToList(carInfo){
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   
   
-  var div = divStart +
+  //var div = divStart +
 }
 
 function compareCar(event){

@@ -57,7 +57,7 @@ function updateData(){
 }
 
 function addCarToList(carInfo){
-  setCookie('carCount',carCount,7);
+  var carCount = getCookie('carCount');
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';

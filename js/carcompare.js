@@ -43,6 +43,7 @@ function compareCar(event){
   }
   console.log(carCount);
   console.log(carInfo);
+  console.log("wut");
   
   //setCookie('carCount',i,7);
 }

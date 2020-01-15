@@ -83,19 +83,19 @@ function compareCar(event){
   if(carCount < 3) {
     if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);
-      addCarToList(carInfo);
       carCount++;
       setCookie('carCount',carCount,7);
+      addCarToList(carInfo);
     } else if(carCount == 1) {
       setCookie('carInfo2',carInfo,7);
-      addCarToList(carInfo);
       carCount++;
       setCookie('carCount',carCount,7);
+      addCarToList(carInfo);
     } else if(carCount == 2) {
       setCookie('carInfo3',carInfo,7);
-      addCarToList(carInfo);
       carCount++;
       setCookie('carCount',carCount,7);
+      addCarToList(carInfo);
     }
    
   } else {

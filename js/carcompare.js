@@ -113,3 +113,4 @@ function compareCar(event){
   }
 	document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 }
+//

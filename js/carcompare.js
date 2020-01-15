@@ -52,28 +52,28 @@ function updateData(){
     if(car1 != 0) {
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(car1);
+      addCarToList(car1,1);
     }
     if(car2 != 0) {
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(car2);
+      addCarToList(car2,2);
     }
     if(car3 != 0) {
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(car3);
+      addCarToList(car3,3);
     }
 }
 
-function addCarToList(carInfo){
+function addCarToList(carInfo,i){
   var carCount = getCookie('carCount');
   document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 	
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';
-  var divBody = '<div class="media-body"><h6 class="mt-0 list-group-title">'+ arr[1] +'</h6><div class="rating"><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></div><div class="cart-price">'+ arr[2] +'</div><div class="deleteCompare" onclick="delCookie('+ carCount +')">Delete</div></div></div>';
+  var divBody = '<div class="media-body"><h6 class="mt-0 list-group-title">'+ arr[1] +'</h6><div class="rating"><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star active-color" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></div><div class="cart-price">'+ arr[2] +'</div><div class="deleteCompare" onclick="delCookie('+ i +')">Delete</div></div></div>';
   
   var div = divStart + divImage + divBody;
   //console.log(div);
@@ -95,17 +95,17 @@ function compareCar(event){
       setCookie('carInfo1',carInfo,7);
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(carInfo);
+      addCarToList(carInfo,1);
     } else if(carCount == 1) {
       setCookie('carInfo2',carInfo,7);
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(carInfo);
+      addCarToList(carInfo,2);
     } else if(carCount == 2) {
       setCookie('carInfo3',carInfo,7);
       carCount++;
       setCookie('carCount',carCount,7);
-      addCarToList(carInfo);
+      addCarToList(carInfo,3);
     }
    
   } else {

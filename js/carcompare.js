@@ -38,20 +38,30 @@ function updateData(){
 	  while (compareBox.lastChild) {
 		  compareBox.removeChild(compareBox.lastChild);
 	  }
+	
+    setCookie('carCount',0,7);
     var carCount = getCookie('carCount');
+	
     var car1 = getCookie('carInfo1');
     var car2 = getCookie('carInfo2');
     var car3 = getCookie('carInfo3');
+	
     console.log('car count is',carCount);
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;//set number for icon
     //console.log(test);
     if(car1 != 0) {
+      carCount++;
+      setCookie('carCount',carCount,7);
       addCarToList(car1);
     }
     if(car2 != 0) {
+      carCount++;
+      setCookie('carCount',carCount,7);
       addCarToList(car2);
     }
     if(car3 != 0) {
+      carCount++;
+      setCookie('carCount',carCount,7);
       addCarToList(car3);
     }
 }

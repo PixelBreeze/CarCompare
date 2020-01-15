@@ -52,7 +52,7 @@ function addCarToList(carInfo){
   
   var div = divStart + divImage + divBody;
   console.log(div);
-  $("#wd-item-list").append(div);
+  $(".wd-item-list").append(div);
 }
 
 function compareCar(event){

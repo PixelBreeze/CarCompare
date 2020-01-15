@@ -58,6 +58,8 @@ function updateData(){
 
 function addCarToList(carInfo){
   var carCount = getCookie('carCount');
+  varCount++;
+  setCookie('carCount',carCount,7);
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';
   var divImage = '<img class="d-flex mr-3 cart-img" src="'+ arr[3] +'" alt="cart-img">';
@@ -87,8 +89,6 @@ function compareCar(event){
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
     }
-    carCount++;
-    setCookie('carCount',carCount,7);
     console.log(carCount);
     document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
   } else {

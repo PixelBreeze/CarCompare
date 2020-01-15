@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function compareCar(event){
   var domElement = event.target;//$(event.target);
-  var carid = domElement.attr('id');
+  var carid = domElement.id;
   var carTitle = domElement.parentElement.parentElement;
   var carCount = 0//getCookie('carCount');
   if(carCount < 3) {

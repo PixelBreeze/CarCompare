@@ -58,7 +58,7 @@ function updateData(){
 
 function addCarToList(carInfo){
   var carCount = getCookie('carCount');
-  varCount++;
+  carCount++;
   setCookie('carCount',carCount,7);
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
   var divStart = '<div class="media">';

@@ -31,7 +31,7 @@ function updateData(){
     var car2 = getCookie('carInfo2');
     var car3 = getCookie('carInfo3');
     console.log('car count is',carCount);
-    document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;//set number for icon
+    document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount+1;//set number for icon
     //console.log(test);
     if(car1 != 0) {
       addCarToList(car1);
@@ -54,7 +54,7 @@ function addCarToList(carInfo){
   var div = divStart + divImage + divBody;
   //console.log(div);
   $(".wd-item-list").append(div);
-  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
+  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount+1;
 }
 
 function compareCar(event){

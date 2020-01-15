@@ -22,6 +22,10 @@ function getCookie(cname) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  updateData();
+}, false);
+
+function updateData(){
     var carCount = getCookie('carCount');
     var car1 = getCookie('carInfo1');
     var car2 = getCookie('carInfo2');
@@ -38,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(car3 != null) {
       addCarToList(car3);
     }
-}, false);
+}
 
 function addCarToList(carInfo){
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3

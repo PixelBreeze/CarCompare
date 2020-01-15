@@ -23,8 +23,30 @@ function getCookie(cname) {
 
 document.addEventListener('DOMContentLoaded', function() {
     var carCount = getCookie('carCount');
+    var car1 = getCookie('carInfo1');
+    var car2 = getCookie('carInfo2');
+    var car3 = getCookie('carInfo3');
     console.log('car count is',carCount);
+  //set number for icon
+  
+    if(car1 != null) {
+      addCarToList(car1);
+    }
+    if(car2 != null) {
+      addCarToList(car2);
+    }
+    if(car3 != null) {
+      addCarToList(car3);
+    }
 }, false);
+
+function addCarToList(carInfo){
+  var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
+  var
+  
+  
+  var div = divStart +
+}
 
 function compareCar(event){
   var domElement = event.target;//$(event.target);
@@ -48,8 +70,7 @@ function compareCar(event){
   carCount++;
   setCookie('carCount',carCount,7);
   console.log(carCount);
-  //carInfo=getCookie('carInfo1');
-  console.log(getCookie('carInfo1'));
+  //console.log(getCookie('carInfo1'));
   
   //setCookie('carCount',i,7);
 }

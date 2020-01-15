@@ -30,7 +30,7 @@ function compareCar(event){
   var domElement = event.target;//$(event.target);
   var carid = domElement.id;
   var carTitle = domElement.parentElement.parentElement.previousSibling.childNodes[0].childNodes[1].innerHTML;
-  var carPrice = domElement.parentElement.parentElement.previousSibling.previousSibling.previousSibling.childNodes[0];
+  var carPrice = domElement.parentElement.parentElement.previousSibling.previousSibling.previousSibling.childNodes[0].childNodes[0].childNodes[0].innerHTML;
   var carCount = 0//getCookie('carCount');
   if(carCount < 3) {
     carCount++;

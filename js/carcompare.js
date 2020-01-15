@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function updateData(){  
-    const compareBox = document.getElementsByClassName("wd-item-list")[0];
+    var compareBox = document.getElementsByClassName("wd-item-list")[0];
 	  while (compareBox.lastChild) {
 		  compareBox.removeChild(compareBox.lastChild);
 	  }
@@ -58,8 +58,6 @@ function updateData(){
 
 function addCarToList(carInfo){
   var carCount = getCookie('carCount');
-  carCount++;
-  setCookie('carCount',carCount,7);
   document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 	
   var arr=carInfo.split(":"); //id0,title1,price2,imageurl3
@@ -86,12 +84,18 @@ function compareCar(event){
     if(carCount == 0) {
       setCookie('carInfo1',carInfo,7);
       addCarToList(carInfo);
+      carCount++;
+      setCookie('carCount',carCount,7);
     } else if(carCount == 1) {
       setCookie('carInfo2',carInfo,7);
       addCarToList(carInfo);
+      carCount++;
+      setCookie('carCount',carCount,7);
     } else if(carCount == 2) {
       setCookie('carInfo3',carInfo,7);
       addCarToList(carInfo);
+      carCount++;
+      setCookie('carCount',carCount,7);
     }
    
   } else {

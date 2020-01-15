@@ -54,7 +54,6 @@ function addCarToList(carInfo){
   var div = divStart + divImage + divBody;
   //console.log(div);
   $(".wd-item-list").append(div);
-  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
 }
 
 function compareCar(event){
@@ -82,7 +81,6 @@ function compareCar(event){
   carCount++;
   setCookie('carCount',carCount,7);
   console.log(carCount);
-  //console.log(getCookie('carInfo1'));
-  
-  //setCookie('carCount',i,7);
+  document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling.nextSibling.innerHTML = carCount;
+
 }

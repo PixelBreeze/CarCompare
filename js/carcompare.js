@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var car2 = getCookie('carInfo2');
     var car3 = getCookie('carInfo3');
     console.log('car count is',carCount);
-    var test = document.getElementsByClassName("fa-balance-scale")[0].parentElement;//= carCount;//set number for icon
+    var test = document.getElementsByClassName("fa-balance-scale")[0].parentElement.nextSibling;//= carCount;//set number for icon
     console.log(test);
     if(car1 != null) {
       addCarToList(car1);

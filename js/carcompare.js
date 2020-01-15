@@ -93,5 +93,4 @@ function compareCar(event){
   } else {
     alert("Reached maximum of cars to compare!");
   }
-
 }

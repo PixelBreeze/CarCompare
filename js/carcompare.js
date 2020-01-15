@@ -30,6 +30,12 @@ function compareCar(event){
   var domElement = $(event.target);
   var carid = domElement.attr('id');
   var carCount = getCookie('carCount');
+  if(carCount < 3) {
+    carCount++;
+    setCookie('carCount',carCount,7);
+  } else {
+    alert("Reached maximum of cars to compare!");
+  }
   console.log(carCount);
   
   //setCookie('carCount',i,7);

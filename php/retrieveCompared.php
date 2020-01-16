@@ -6,13 +6,13 @@ $c_car3 = "carInfo3";
 $s_car1 = $_COOKIE[$c_car1];
 $s_car2 = $_COOKIE[$c_car2];
 $s_car3 = $_COOKIE[$c_car3];
-$id_list = "";
 
 if(!isset($_COOKIE[$c_car1])) {
     $s_car1=0;
 } else {
     $car1_arr = explode (":", $s_car1);  
     $car1_id = $car1_arr[0];
+}
 if(!isset($_COOKIE[$c_car2])) {
     $s_car2=0;
 } else {
@@ -32,7 +32,6 @@ if (mysqli_connect_errno()){
   echo "Failed to connect to DB: " . mysqli_connect_error();
 }
 
-/*
 $sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr,img_url FROM cars WHERE id in (" . $car1_id . "," . $car2_id . "," . $car3_id . ")";
 $result=mysqli_query($connection,$sql);
 
@@ -58,7 +57,6 @@ mysqli_close($connection);
 
 
 echo json_encode($comparelist);
-*/
 
 
 ?>

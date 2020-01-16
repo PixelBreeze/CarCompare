@@ -23,6 +23,7 @@ function highlightBest(sectionId){
 		$(div).each(function( i ) {
   			if(this.innerHTML > prevValueMax) {
 				bestValue=this;
+				prevValueMax=this.innerHTML;
 				//console.log(this);
 			}
 		});
@@ -30,6 +31,7 @@ function highlightBest(sectionId){
 		$(div).each(function( i ) {
   			if(this.innerHTML < prevValueMin) {
 				bestValue=this;
+				prevValueMin = this.innerHTML;
 				//console.log(this);
 			}
 		});

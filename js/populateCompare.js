@@ -14,6 +14,18 @@ function getCookie(cname) {
   return "0";
 }
 
+function highlightBest(sectionId){
+	var prevValue = 0;
+	var largestValue =0;
+	var div = document.getElementById(sectionId).children;
+	$(div).each(function( i ) {
+  		if(this.innerHTML > prevValue) {
+			largestValue=this;
+		}
+	});
+	this.css("font-weight","Bold");
+}
+
 $(window).ready(function(e) {
     $.ajax({
         url: "php/retrieveCompared.php",
@@ -63,6 +75,8 @@ $(window).ready(function(e) {
 		i++;
 		$('#ui-id-4').css({"display":"block","height":"100px"});
             });
+		highlightBest("carRelease");
         }
     });
 });
+

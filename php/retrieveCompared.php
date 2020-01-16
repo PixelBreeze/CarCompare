@@ -8,21 +8,23 @@ $s_car2 = $_COOKIE[$c_car2];
 $s_car3 = $_COOKIE[$c_car3];
 $id_list = "";
 
-if(isset($_COOKIE[$c_car1])) {
-$car1_arr = explode (":", $s_car1);  
-    echo "Cookie '" . $car1_arr[0] . "' is set!<br>";
-    $id_list=$id_list+$car1_arr[0] . ",";
-    echo $id_list;
+if(!isset($_COOKIE[$c_car1])) {
+    $s_car1=0;
+} else {
+    $car1_arr = explode (":", $s_car1);  
+    $car1_id = $car1_arr[0];
+if(!isset($_COOKIE[$c_car2])) {
+    $s_car2=0;
+} else {
+    $car2_arr = explode (":", $s_car2);  
+    $car2_id = $car2_arr[0];
 }
-if(isset($_COOKIE[$c_car2])) {
-    echo "Cookie '" . $c_car1 . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$c_car1];
+if(!isset($_COOKIE[$c_car3])) {
+    $s_car3=0;
+} else {
+    $car3_arr = explode (":", $s_car3);  
+    $car3_id = $car3_arr[0];
 }
-if(isset($_COOKIE[$c_car3])) {
-    echo "Cookie '" . $c_car1 . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$c_car1];
-}
-
 
 
 $connection=mysqli_connect("localhost","webuser","webuserpass1","cars");
@@ -30,7 +32,7 @@ if (mysqli_connect_errno()){
   echo "Failed to connect to DB: " . mysqli_connect_error();
 }
 
-/*$sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr,img_url FROM cars";
+$sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr,img_url FROM cars WHERE id in (" . $car1_id . "," . $car2_id . "," . $car3_id . ")";
 $result=mysqli_query($connection,$sql);
 
 $comparelist = array();
@@ -55,7 +57,6 @@ mysqli_close($connection);
 
 
 echo json_encode($comparelist);
-*/
 
 
 

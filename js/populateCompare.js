@@ -23,7 +23,7 @@ $(window).ready(function(e) {
                     divClose;
 
                 $("#carColumnHeader").append(div);
-
+		$(#"productsAdded").append("<u>" + carCount + " products added</u>");
             });
         }
     });

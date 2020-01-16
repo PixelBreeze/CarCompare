@@ -78,6 +78,8 @@ $(window).ready(function(e) {
 		$('#ui-id-4').css({"display":"block","height":"100px"});
             });
 		highlightBest("carRelease");
+		highlightBest("carPrice");
+		highlightBest("carEnginec");
         }
     });
 });

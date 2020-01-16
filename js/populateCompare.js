@@ -37,7 +37,7 @@ function highlightBest(sectionId){
 		});
 	}
 	$(bestValue).css({"font-weight":"Bold"});
-	$(bestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
+	//$(bestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
 }
 
 $(window).ready(function(e) {

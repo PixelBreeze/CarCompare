@@ -77,10 +77,10 @@ $(window).ready(function(e) {
 		i++;
 		$('#ui-id-4').css({"display":"block","height":"100px"});
             });
-        }
-	    		highlightBest("carRelease");
+		highlightBest("carRelease");
 		highlightBest("carPrice");
 		highlightBest("carEnginec");
+        }
     });
 });
 

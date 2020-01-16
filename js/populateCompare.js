@@ -25,7 +25,7 @@ var prevValue = 0;
 		}
 	});	
 	$(largestValue).css({"font-weight":"Bold"});
-	//console.log(largestValue);
+	$(largestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
 }
 
 $(window).ready(function(e) {

@@ -5,7 +5,7 @@ $(window).ready(function(e) {
         dataType: "json",
         success: function(comparelist) {
             var i = 0;
-            var divStart = '<div class="col-12 col-md-6 col-lg-12"><figure class="figure product-box row"><div class="col-12 col-md-12 col-lg-5 col-xl-4 p0"><div class="product-box-img">';
+            var divStart = '<td class="compare-details-section"><div class="col-12 col-md-6 col-lg-12"><figure class="figure product-box row"><div class="col-12 col-md-12 col-lg-5 col-xl-4 p0"><div class="product-box-img">';
 
             list.forEach(function(obj, index) {
 		    

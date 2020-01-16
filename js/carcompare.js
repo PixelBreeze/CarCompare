@@ -102,7 +102,11 @@ function compareCar(event){
       setCookie('carCount',carCount,7);
       addCarToList(carInfo,2);
     } else if(carCount == 2) {
-      setCookie('carInfo3',carInfo,7);
+	    if(getCookie('carInfo1')==0){
+		setCookie('carInfo1',carInfo,7);
+	    } else {
+      		setCookie('carInfo3',carInfo,7);
+	    }
       carCount++;
       setCookie('carCount',carCount,7);
       addCarToList(carInfo,3);

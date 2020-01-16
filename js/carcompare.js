@@ -27,6 +27,9 @@ function delCookie(i){
   carCount--;
   setCookie('carCount',carCount,7);
   updateData();
+	if("http://46.101.162.12/compare-products.html" == window.location.href){
+  		location.reload();
+	}
 }
 
 document.addEventListener('DOMContentLoaded', function() {

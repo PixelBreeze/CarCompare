@@ -21,17 +21,17 @@ function highlightBest(sectionId){
 	var div = document.getElementById(sectionId).children;
 	if(sectionId.localeCompare("carPrice") != 0) {
 		$(div).each(function( i ) {
-  			if(this.innerHTML > prevValueMax) {
+  			if(parseInt(this.innerHTML, 10) > prevValueMax) {
 				bestValue=this;
-				prevValueMax=this.innerHTML;
+				prevValueMax= parseInt(this.innerHTML, 10)
 				//console.log(this);
 			}
 		});
 	} else {
 		$(div).each(function( i ) {
-  			if(this.innerHTML < prevValueMin) {
+  			if(parseInt(this.innerHTML, 10) < prevValueMin) {
 				bestValue=this;
-				prevValueMin = this.innerHTML;
+				prevValueMin = parseInt(this.innerHTML, 10)
 				//console.log(this);
 			}
 		});

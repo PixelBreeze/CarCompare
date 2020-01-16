@@ -32,11 +32,11 @@ if (mysqli_connect_errno()){
   echo "Failed to connect to DB: " . mysqli_connect_error();
 }
 
-echo $car1_id . "," . $car2_id;
+//echo $car1_id . "," . $car2_id;
 
-$sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr, FROM cars WHERE id in (" . $car1_id . "," . $car2_id . "," . $car3_id . ")";
+$sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr FROM cars WHERE id in (" . $car1_id . "," . $car2_id . "," . $car3_id . ")";
 $result=mysqli_query($connection,$sql);
-echo $sql;
+//echo $sql;
 $comparelist = array();
 while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
     $comparelist[] = array (
@@ -49,7 +49,7 @@ while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
         'price' => $row['price'],
         'color' => $row['color'],
         'gear_box' => $row['gear_box'],
-        'descr' => $row['descr'],
+        'descr' => $row['descr']
     );
 }
 

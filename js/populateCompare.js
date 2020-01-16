@@ -23,7 +23,7 @@ function highlightBest(sectionId){
 			largestValue=this;
 		}
 	});
-	this.css("font-weight","Bold");
+	$this.css("font-weight","Bold");
 }
 
 $(window).ready(function(e) {

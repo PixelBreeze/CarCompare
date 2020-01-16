@@ -101,7 +101,9 @@ $(window).ready(function(e){
 });
 
 function delCookie(i){
-	location.reload();
+	setTimeout(function() {
+		location.reload();
+	}, 300);
 }
 
 

@@ -32,6 +32,7 @@ if (mysqli_connect_errno()){
   echo "Failed to connect to DB: " . mysqli_connect_error();
 }
 
+/*
 $sql="SELECT id,brand,model,engine_type,engine_capacity,year,price,color,gear_box,descr,img_url FROM cars WHERE id in (" . $car1_id . "," . $car2_id . "," . $car3_id . ")";
 $result=mysqli_query($connection,$sql);
 
@@ -57,7 +58,7 @@ mysqli_close($connection);
 
 
 echo json_encode($comparelist);
-
+*/
 
 
 ?>

@@ -43,7 +43,6 @@ $(window).ready(function(e) {
 		    if(i==0){
 			    $("#productsAdded").append("<u>" + carCount + " cars added</u>");
 		    }		
-		$("#productsAdded").append("<u>" + carCount + " cars added</u>");
             });
         }
     });

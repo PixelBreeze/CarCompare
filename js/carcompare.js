@@ -104,8 +104,10 @@ function compareCar(event){
     } else if(carCount == 2) {
 	    if(getCookie('carInfo1')==0){
 		setCookie('carInfo1',carInfo,7);
+	    } else if(getCookie('carInfo2')==0) {
+      		setCookie('carInfo2',carInfo,7);
 	    } else {
-      		setCookie('carInfo3',carInfo,7);
+		setCookie('carInfo3',carInfo,7);
 	    }
       carCount++;
       setCookie('carCount',carCount,7);

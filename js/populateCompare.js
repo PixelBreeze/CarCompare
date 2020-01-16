@@ -103,7 +103,7 @@ $(window).ready(function(e){
 function delCookie(i){
 	setTimeout(function() {
 		location.reload();
-	}, 300);
+	}, 1000);
 }
 
 

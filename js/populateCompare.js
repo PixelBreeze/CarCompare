@@ -81,9 +81,11 @@ $(window).ready(function(e) {
     });
 });
 $(window).ready(function(e){
+	setTimeout(function() {
 		highlightBest("carRelease");
 		highlightBest("carPrice");
 		highlightBest("carEnginec");
+	}, 100);
 });
 
 

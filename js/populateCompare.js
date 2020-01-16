@@ -42,7 +42,8 @@ $(window).ready(function(e) {
 		var carCount = getCookie('carCount');
 		    if(i==0){
 			    $("#productsAdded").append("<u>" + carCount + " cars added</u>");
-		    }		
+		    }	
+		    i++;
             });
         }
     });

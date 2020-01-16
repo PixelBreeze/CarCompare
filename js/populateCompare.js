@@ -15,15 +15,17 @@ function getCookie(cname) {
 }
 
 function highlightBest(sectionId){
-	var prevValue = 0;
+var prevValue = 0;
 	var largestValue =0;
-	var div = document.getElementById(sectionId).children;
+	var div = document.getElementById("carRelease").children;
 	$(div).each(function( i ) {
   		if(this.innerHTML > prevValue) {
 			largestValue=this;
+			//console.log(this);
 		}
-	});
-	$this.css("font-weight","Bold");
+	});	
+	$(largestValue).css({"font-weight":"Bold"});
+	//console.log(largestValue);
 }
 
 $(window).ready(function(e) {

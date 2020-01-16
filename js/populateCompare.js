@@ -17,7 +17,7 @@ function getCookie(cname) {
 function highlightBest(sectionId){
 var prevValue = 0;
 	var largestValue =0;
-	var div = document.getElementById("carRelease").children;
+	var div = document.getElementById(sectionId).children;
 	$(div).each(function( i ) {
   		if(this.innerHTML > prevValue) {
 			largestValue=this;

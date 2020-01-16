@@ -40,7 +40,7 @@ $(window).ready(function(e) {
 		var divEnginec='<td>'+ obj.engine_capacity +'.0</td>';
 		//gearshift
 		var divGearb='<td>'+ obj.gear_box +'</td>';
-		var divGearc='<td>7</td>';
+		var divGearc='<td>6</td>';
 		var divPrice1='<td>'+ obj.price +'</td>';
 		    
 		//append header

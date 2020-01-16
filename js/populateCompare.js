@@ -40,6 +40,9 @@ $(window).ready(function(e) {
 
                 $("#carColumnHeader").append(div);
 		var carCount = getCookie('carCount');
+		    if(i==0){
+			    $("#productsAdded").append("<u>" + carCount + " cars added</u>");
+		    }		
 		$("#productsAdded").append("<u>" + carCount + " cars added</u>");
             });
         }

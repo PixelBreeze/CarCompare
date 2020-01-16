@@ -61,6 +61,7 @@ $(window).ready(function(e) {
 			$("#productsAdded").append("<u>" + carCount + " cars added</u>");
 		    }	
 		i++;
+		$('#ui-id-4').css("display:block; height:100px;");
             });
         }
     });

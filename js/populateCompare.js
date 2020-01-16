@@ -39,7 +39,7 @@ $(window).ready(function(e) {
                     divClose;
 
                 $("#carColumnHeader").append(div);
-		//var carCount = getCookie('carCount');
+		var carCount = getCookie('carCount');
 		$("#productsAdded").append("<u>" + carCount + " products added</u>");
             });
         }

@@ -100,10 +100,3 @@ $(window).ready(function(e){
 	}, 100);
 });
 
-function delCookie(i){
-	setTimeout(function() {
-		location.reload();
-	}, 1000);
-}
-
-

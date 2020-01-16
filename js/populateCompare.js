@@ -15,17 +15,27 @@ function getCookie(cname) {
 }
 
 function highlightBest(sectionId){
-var prevValue = 0;
-	var largestValue =0;
+	var prevValueMax = 0;
+	var prevValueMin = 999999;
+	var bestValue =0;
 	var div = document.getElementById(sectionId).children;
-	$(div).each(function( i ) {
-  		if(this.innerHTML > prevValue) {
-			largestValue=this;
-			//console.log(this);
-		}
-	});	
-	$(largestValue).css({"font-weight":"Bold"});
-	$(largestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
+	if(!sectionId == "carPrice") {
+		$(div).each(function( i ) {
+  			if(this.innerHTML > prevValueMax) {
+				bestValue=this;
+				//console.log(this);
+			}
+		});
+	} else {
+		$(div).each(function( i ) {
+  			if(this.innerHTML < prevValueMin) {
+				bestValue=this;
+				//console.log(this);
+			}
+		});
+	}
+	$(bestValue).css({"font-weight":"Bold"});
+	$(bestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
 }
 
 $(window).ready(function(e) {

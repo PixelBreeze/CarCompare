@@ -24,8 +24,8 @@ var prevValue = 0;
 			//console.log(this);
 		}
 	});	
-	//$(largestValue).css({"font-weight":"Bold"});
-	//$(largestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
+	$(largestValue).css({"font-weight":"Bold"});
+	$(largestValue).append('<i class="fa fa-star active-color" aria-hidden="true"></i>');
 }
 
 $(window).ready(function(e) {
@@ -83,4 +83,6 @@ $(window).ready(function(e) {
 		highlightBest("carPrice");
 		highlightBest("carEnginec");
 });
+
+
 

@@ -79,6 +79,8 @@ $(window).ready(function(e) {
             });
         }
     });
+});
+$(window).ready(function(e){
 		highlightBest("carRelease");
 		highlightBest("carPrice");
 		highlightBest("carEnginec");

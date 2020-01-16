@@ -9,7 +9,7 @@ $s_car3 = $_COOKIE[$c_car3];
 
 if(isset($_COOKIE[$c_car1])) {
 $car1_arr = explode (":", $s_car1);  
-    echo "Cookie '" . $car1_arr . "' is set!<br>";
+    echo "Cookie '" . $car1_arr[0] . "' is set!<br>";
     echo "Value is: " . $_COOKIE[$c_car1];
 }
 if(isset($_COOKIE[$c_car2])) {

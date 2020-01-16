@@ -40,10 +40,13 @@ $(window).ready(function(e) {
 
                 $("#carColumnHeader").append(div);
 		var carCount = getCookie('carCount');
+		    console.log(i);
 		    if(i==0){
 			    $("#productsAdded").append("<u>" + carCount + " cars added</u>");
+			    console.log("added");
 		    }	
 		    i++;
+		    console.log(i);
             });
         }
     });

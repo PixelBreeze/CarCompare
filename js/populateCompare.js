@@ -19,7 +19,7 @@ function highlightBest(sectionId){
 	var prevValueMin = 999999;
 	var bestValue =0;
 	var div = document.getElementById(sectionId).children;
-	if(sectionId.localeCompare("carPrice") != true) {
+	if(sectionId.localeCompare("carPrice") != 0) {
 		$(div).each(function( i ) {
   			if(this.innerHTML > prevValueMax) {
 				bestValue=this;

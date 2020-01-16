@@ -36,11 +36,11 @@ $(window).ready(function(e) {
 		var divYear='<td>'+ obj.year +'</td>';
 		var divColor='<td>'+ obj.color +'</td>';
 		//engine
-		var divEnginet='<td>'+ obj.engine_type +'</td>'
-		var divEnginec='<td>'+ obj.engine_capacity +'.0</td>'
+		var divEnginet='<td>'+ obj.engine_type +'</td>';
+		var divEnginec='<td>'+ obj.engine_capacity +'.0</td>';
 		//gearshift
-		var divGearb='<td>'+ obj.gear_box +'</td>'
-		var divGearc='<td>7</td>'
+		var divGearb='<td>'+ obj.gear_box +'</td>';
+		var divGearc='<td>7</td>';
 		    
 		//append header
 		var div = divImage + divStatic + divTitle + divPrice + divClose;

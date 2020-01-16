@@ -51,7 +51,6 @@ $(window).ready(function(e) {
 		$("#carColor").append(divColor);
 		$("#carEnginet").append(divEnginet);
 		$("#carEnginec").append(divEnginec);
-		$("#carEnginet").append(divEnginet);
 		$("#carGearb").append(divGearb);
 		$("#carGearc").append(divGearc);
 		    

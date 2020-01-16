@@ -41,6 +41,7 @@ $(window).ready(function(e) {
 		//gearshift
 		var divGearb='<td>'+ obj.gear_box +'</td>';
 		var divGearc='<td>7</td>';
+		var divPrice1='<td>'+ obj.price +'</td>';
 		    
 		//append header
 		var div = divImage + divStatic + divTitle + divPrice + divClose;
@@ -53,6 +54,7 @@ $(window).ready(function(e) {
 		$("#carEnginec").append(divEnginec);
 		$("#carGearb").append(divGearb);
 		$("#carGearc").append(divGearc);
+		$("#carPrice").append(divPrice1);
 		    
 		var carCount = getCookie('carCount');
 		if(i==0){

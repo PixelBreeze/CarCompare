@@ -8,19 +8,19 @@ $s_car2 = $_COOKIE[$c_car2];
 $s_car3 = $_COOKIE[$c_car3];
 
 if(!isset($_COOKIE[$c_car1])) {
-    $s_car1=0;
+    $car1_id=0;
 } else {
     $car1_arr = explode (":", $s_car1);  
     $car1_id = $car1_arr[0];
 }
 if(!isset($_COOKIE[$c_car2])) {
-    $s_car2=0;
+    $car2_id=0;
 } else {
     $car2_arr = explode (":", $s_car2);  
     $car2_id = $car2_arr[0];
 }
 if(!isset($_COOKIE[$c_car3])) {
-    $s_car3=0;
+    $car3_id=0;
 } else {
     $car3_arr = explode (":", $s_car3);  
     $car3_id = $car3_arr[0];

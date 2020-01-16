@@ -11,7 +11,7 @@ $id_list = "";
 if(isset($_COOKIE[$c_car1])) {
 $car1_arr = explode (":", $s_car1);  
     echo "Cookie '" . $car1_arr[0] . "' is set!<br>";
-    $id_list=$id_list+$car1_arr[0]+",";
+    $id_list=$id_list+$car1_arr[0] . ",";
     echo $id_list;
 }
 if(isset($_COOKIE[$c_car2])) {

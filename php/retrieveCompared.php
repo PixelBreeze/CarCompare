@@ -6,11 +6,13 @@ $c_car3 = "carInfo3";
 $s_car1 = $_COOKIE[$c_car1];
 $s_car2 = $_COOKIE[$c_car2];
 $s_car3 = $_COOKIE[$c_car3];
+$id_list = "";
 
 if(isset($_COOKIE[$c_car1])) {
 $car1_arr = explode (":", $s_car1);  
     echo "Cookie '" . $car1_arr[0] . "' is set!<br>";
-    echo "Value is: " . $_COOKIE[$c_car1];
+    $id_list=$id_list+$car1_arr[0]+",";
+    echo $id_list;
 }
 if(isset($_COOKIE[$c_car2])) {
     echo "Cookie '" . $c_car1 . "' is set!<br>";

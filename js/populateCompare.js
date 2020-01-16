@@ -100,5 +100,8 @@ $(window).ready(function(e){
 	}, 100);
 });
 
+function delCookie(i){
+	location.reload();
+}
 
 

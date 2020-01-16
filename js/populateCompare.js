@@ -22,8 +22,7 @@ $(window).ready(function(e) {
                     divPrice +
                     divClose;
 
-                $("#viewContents").append(div);
-		    i++;*/
+                $("#carColumnHeader").append(div);
 
             });
         }
